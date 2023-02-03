@@ -30,7 +30,7 @@ export class LanyardClient {
 		await this.request(request);
 	}
 
-	private async request<T>(request: Request) {
+	private async request(request: Request) {
 		request.headers.set('Authorization', this.options.token);
 
 		const response = await fetch(request);
@@ -39,6 +39,6 @@ export class LanyardClient {
 			throw new Error(`Failed to fetch: ${response.status} ${response.statusText}`);
 		}
 
-		return response.json() as Promise<T>;
+		return response;
 	}
 }
