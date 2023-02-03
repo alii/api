@@ -1,7 +1,7 @@
-import {z} from 'zod';
-import {router} from '../../router.ts';
 import {KaitoError} from '@kaito-http/core';
+import {z} from 'zod';
 import {env} from '../../env.ts';
+import {router} from '../../router.ts';
 
 export const stats = router().add('POST', '/', {
 	body: z.object({location: z.string()}).partial(),
