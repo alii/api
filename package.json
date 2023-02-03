@@ -1,0 +1,22 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:alii/api.git",
+  "author": "Alistair Smith <hi@alistair.sh>",
+  "license": "MIT",
+  "packageManager": "yarn@3.4.1",
+  "dependencies": {
+    "@kaito-http/core": "^2.7.1",
+    "envsafe": "^2.0.3",
+    "es-urlcat": "^1.0.0",
+    "zod": "^3.20.2"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "prettier": "^2.8.3",
+    "prettier-plugin-tailwindcss": "^0.2.2",
+    "tsx": "^3.12.2",
+    "typescript": "next"
+  }
+}
