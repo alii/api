@@ -31,7 +31,7 @@ export class LanyardClient {
 	}
 
 	private async request<T>(request: Request) {
-		request.headers.set('Authorzation', this.options.token);
+		request.headers.set('Authorization', this.options.token);
 
 		const response = await fetch(request);
 
