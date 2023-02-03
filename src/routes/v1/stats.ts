@@ -8,7 +8,7 @@ export const stats = router().add('POST', '/', {
 	run: async ({ctx, body}) => {
 		const auth = ctx.req.headers.authorization;
 
-		if (auth !== env.INGEST_API_KEY) {
+		if (auth !== env.INGEST_TOKEN) {
 			throw new KaitoError(401, 'Forbidden');
 		}
 
