@@ -1,6 +1,6 @@
 import {createGetContext, type InferContext} from '@kaito-http/core';
-import {env} from './env';
-import {LanyardClient} from './utils/clients/lanyard';
+import {env} from './env.ts';
+import {LanyardClient} from './utils/clients/lanyard.ts';
 
 export const getContext = createGetContext(async (req, res) => {
 	return {

@@ -3,8 +3,10 @@ import {ZodError} from 'zod';
 import {getContext} from './context.ts';
 import {v1} from './routes/v1/v1.ts';
 
+const app = v1.merge('/v1', v1).add('GET', '/', async () => 'hello! what are you doing here? >.<');
+
 const {server, fmw} = createFMWServer({
-	router: v1,
+	router: app,
 	getContext,
 
 	onError: async ({error}) => {
