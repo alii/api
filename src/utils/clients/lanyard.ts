@@ -6,8 +6,6 @@ export interface LanyardClientOptions {
 	base?: string;
 }
 
-export class LanyardKVNamespace {}
-
 export class LanyardClient {
 	private options: Required<LanyardClientOptions>;
 
