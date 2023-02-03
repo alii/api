@@ -29,10 +29,18 @@ export class LanyardClient {
 			body: value,
 		});
 
+		await this.request(request);
+	}
+
+	private async request<T>(request: Request) {
+		request.headers.set('Authorzation', this.options.token);
+
 		const response = await fetch(request);
 
 		if (!response.ok) {
-			throw new Error(`Failed to update KV: ${response.status} ${response.statusText}`);
+			throw new Error(`Failed to fetch: ${response.status} ${response.statusText}`);
 		}
+
+		return response.json() as Promise<T>;
 	}
 }
