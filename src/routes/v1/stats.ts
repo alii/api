@@ -13,6 +13,10 @@ export const stats = router().add('POST', '/', {
 		}
 
 		if (body.location !== undefined) {
+			if (env.LOCATION_BLACKLIST.includes(body.location.toLowerCase())) {
+				throw new KaitoError(400, 'Location is blacklisted');
+			}
+
 			await ctx.lanyard.update('location', body.location);
 		}
 
