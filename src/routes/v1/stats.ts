@@ -29,6 +29,6 @@ export const stats = router()
 
 		return {
 			location: presence.kv.location ?? null,
-			uptime: Math.floor(stats.uptime / 1000),
+			uptime: ctx.uptime,
 		};
 	});

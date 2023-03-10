@@ -1,22 +1,21 @@
 {
-	"name": "api",
-	"repository": "git@github.com:alii/api.git",
-	"author": "Alistair Smith <hi@alistair.sh>",
-	"packageManager": "yarn@3.4.1",
-	"scripts": {
-		"start": "tsx src/app.ts"
-	},
-	"dependencies": {
-		"@kaito-http/core": "^2.7.1",
-		"@prequist/lanyard": "^0.0.2",
-		"es-urlcat": "^1.0.0",
-		"tsx": "^3.12.2",
-		"zod": "^3.21.4"
-	},
-	"devDependencies": {
-		"@types/node": "^18.11.18",
-		"prettier": "^2.8.3",
-		"prettier-plugin-tailwindcss": "^0.2.2",
-		"typescript": "next"
-	}
+  "name": "api",
+  "repository": "git@github.com:alii/api.git",
+  "author": "Alistair Smith <hi@alistair.sh>",
+  "packageManager": "yarn@3.4.1",
+  "scripts": {
+    "start": "bun run src/app.ts"
+  },
+  "dependencies": {
+    "@kaito-http/core": "^2.7.1",
+    "@prequist/lanyard": "^0.0.2",
+    "es-urlcat": "^1.0.0",
+    "zod": "^3.21.4"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "prettier": "^2.8.3",
+    "prettier-plugin-tailwindcss": "^0.2.2",
+    "typescript": "next"
+  }
 }
