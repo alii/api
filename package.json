@@ -1,5 +1,5 @@
 {
-	"name": "api",
+	"name": "@alii/api",
 	"repository": "git@github.com:alii/api.git",
 	"author": "Alistair Smith <hi@alistair.sh>",
 	"packageManager": "yarn@3.4.1",

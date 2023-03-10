@@ -5,6 +5,22 @@ __metadata:
   version: 6
   cacheKey: 8
 
+"@alii/api@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@alii/api@workspace:."
+  dependencies:
+    "@kaito-http/core": ^2.7.1
+    "@prequist/lanyard": ^0.0.2
+    "@types/node": ^18.11.18
+    es-urlcat: ^1.0.0
+    prettier: ^2.8.3
+    prettier-plugin-tailwindcss: ^0.2.2
+    tsx: ^3.12.3
+    typescript: next
+    zod: ^3.21.4
+  languageName: unknown
+  linkType: soft
+
 "@esbuild-kit/cjs-loader@npm:^2.4.2":
   version: 2.4.2
   resolution: "@esbuild-kit/cjs-loader@npm:2.4.2"
@@ -294,22 +310,6 @@ __metadata:
   checksum: 2aa4bb54caf2d622f1afdad09441695af2a83aa3fe8b8afa581d205e57ed4261c183c4d3877cee25794443fde5876417d859c108078ab788d6af7e4fe52eb66b
   languageName: node
   linkType: hard
-
-"api@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "api@workspace:."
-  dependencies:
-    "@kaito-http/core": ^2.7.1
-    "@prequist/lanyard": ^0.0.2
-    "@types/node": ^18.11.18
-    es-urlcat: ^1.0.0
-    prettier: ^2.8.3
-    prettier-plugin-tailwindcss: ^0.2.2
-    tsx: ^3.12.3
-    typescript: next
-    zod: ^3.21.4
-  languageName: unknown
-  linkType: soft
 
 "aproba@npm:^1.0.3 || ^2.0.0":
   version: 2.0.0
