@@ -1,4 +1,6 @@
 import urlcat from 'es-urlcat';
+import {API, type Types, LanyardHTTPError} from '@prequist/lanyard';
+import {env} from '../../env';
 
 export interface LanyardClientOptions {
 	token: string;
@@ -28,6 +30,24 @@ export class LanyardClient {
 		});
 
 		await this.request(request);
+	}
+
+	async get(id: string = env.DISCORD_ID) {
+		const url = urlcat(this.options.base, '/v1/users/:user_id', {
+			user_id: id,
+		});
+
+		const request = new Request(url);
+
+		const response = await this.request(request);
+
+		const body = (await response.json()) as API.EitherAPIResponse<Types.Presence>;
+
+		if (API.isErrored(response, body)) {
+			throw new LanyardHTTPError(request, response, body);
+		}
+
+		return body.data;
 	}
 
 	private async request(request: Request) {
