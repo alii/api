@@ -10,6 +10,7 @@
 		"@kaito-http/core": "^2.7.1",
 		"@prequist/lanyard": "^0.0.2",
 		"es-urlcat": "^1.0.0",
+		"tsx": "^3.12.3",
 		"zod": "^3.21.4"
 	},
 	"devDependencies": {
