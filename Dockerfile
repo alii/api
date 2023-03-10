@@ -1,11 +1,10 @@
-FROM oven/bun
+FROM node:19-alpine
 WORKDIR /app
 COPY package.json .
-COPY bun.lockb .
-RUN bun install --production
+COPY yarn.lock .
+COPY .yarn .yarn
+COPY .yarnrc.yml .
+RUN yarn workspaces focus --production
 COPY . .
-# Wipe bun node module cache
-RUN rm -rf /root/.bun/install/cache
-# We don't need bunx
-RUN rm /usr/local/bin/bunx
-CMD ["bun", "start"]
+RUN yarn cache clean
+CMD ["yarn", "start"]
