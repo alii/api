@@ -13,7 +13,7 @@ const SQUARE_SIDE = 1080;
 
 export const playlistCovers = router().add('GET', '/', {
 	query: {
-		title: z.string().max(15),
+		title: z.string().max(20),
 		image: z.string().url(),
 	},
 	run: async ({query, ctx}) => {
