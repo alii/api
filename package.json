@@ -3,20 +3,23 @@
 	"repository": "git@github.com:alii/api.git",
 	"author": "Alistair Smith <hi@alistair.sh>",
 	"packageManager": "yarn@3.4.1",
+	"type": "module",
 	"scripts": {
 		"start": "tsx src/app.ts"
 	},
 	"dependencies": {
-		"@kaito-http/core": "^2.7.1",
+		"@kaito-http/core": "^2.7.2",
 		"@prequist/lanyard": "^0.0.2",
+		"dotenv": "^16.0.3",
 		"es-urlcat": "^1.0.0",
-		"tsx": "^3.12.3",
+		"jimp": "^0.22.7",
+		"tsx": "^3.12.6",
 		"zod": "^3.21.4"
 	},
 	"devDependencies": {
-		"@types/node": "^18.11.18",
-		"prettier": "^2.8.3",
-		"prettier-plugin-tailwindcss": "^0.2.2",
-		"typescript": "next"
+		"@types/node": "^18.15.10",
+		"prettier": "^2.8.7",
+		"prettier-plugin-tailwindcss": "^0.2.5",
+		"typescript": "^5.0.2"
 	}
 }

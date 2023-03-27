@@ -1,3 +1,5 @@
+import 'dotenv/config.js';
+
 import {createFMWServer} from '@kaito-http/core';
 import {ZodError} from 'zod';
 import {getContext} from './context.ts';

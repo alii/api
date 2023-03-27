@@ -1,3 +1,5 @@
+import {join} from 'node:path';
+import {fileURLToPath} from 'url';
 import {z} from 'zod';
 
 export function zenv<S extends z.ZodRawShape>(schema: S, env = process.env) {
@@ -5,6 +7,12 @@ export function zenv<S extends z.ZodRawShape>(schema: S, env = process.env) {
 }
 
 export const env = zenv({
+	ROOT_PROJECT_DIR: z.string().default(() => {
+		const envTs = fileURLToPath(import.meta.url);
+
+		return join(envTs, '..', '..');
+	}),
+
 	/**
 	 * The token used to authenticate requests to the stats endpoint
 	 */
