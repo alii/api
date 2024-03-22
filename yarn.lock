@@ -15,6 +15,7 @@ __metadata:
     dotenv: ^16.0.3
     es-urlcat: ^1.0.0
     jimp: ^0.22.7
+    pika-id: ^1.1.3
     prettier: ^2.8.7
     prettier-plugin-tailwindcss: ^0.2.5
     tsx: ^3.12.6
@@ -1801,6 +1802,13 @@ __metadata:
   version: 2.9.3
   resolution: "phin@npm:2.9.3"
   checksum: 7e2abd7be74a54eb7be92dccb1d7a019725c8adaa79ac22a38f25220f9a859393e654ea753a559d326aed7bbc966fadac88270cc8c39d78896f7784219560c47
+  languageName: node
+  linkType: hard
+
+"pika-id@npm:^1.1.3":
+  version: 1.1.3
+  resolution: "pika-id@npm:1.1.3"
+  checksum: a11252ea8c642acfa412f53c13b85bbd26d41f9fe090365c78b954d42013067f4e33f11a82c2deb6dbbf89ad3e6dfc0a7ca8c16db68762dc282750f08d5b4bcb
   languageName: node
   linkType: hard
 

@@ -1,3 +1,4 @@
+import type {Types} from '@prequist/lanyard';
 import {join} from 'node:path';
 import {fileURLToPath} from 'url';
 import {z} from 'zod';
@@ -26,7 +27,17 @@ export const env = zenv({
 	/**
 	 * My Discord ID. Used for Lanyard
 	 */
-	DISCORD_ID: z.string().default('268798547439255572'),
+	DISCORD_ID: z
+		.string()
+		.refine((value): value is Types.Snowflake => {
+			try {
+				BigInt(value);
+				return true;
+			} catch {
+				return false;
+			}
+		})
+		.default('268798547439255572'),
 
 	/**
 	 * Blacklisted locations

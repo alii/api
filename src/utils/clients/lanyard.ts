@@ -1,5 +1,5 @@
+import {API, LanyardHTTPError, type Types} from '@prequist/lanyard';
 import urlcat from 'es-urlcat';
-import {API, type Types, LanyardHTTPError} from '@prequist/lanyard';
 import {env} from '../../env';
 
 export interface LanyardClientOptions {
