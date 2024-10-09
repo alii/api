@@ -9,8 +9,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@alii/api@workspace:."
   dependencies:
-    "@kaito-http/core": ^2.7.2
+    "@kaito-http/core": 3.0.0-beta.6
     "@prequist/lanyard": ^0.0.2
+    "@types/cookie": ^0.6.0
     "@types/node": ^18.15.10
     dotenv: ^16.0.3
     es-urlcat: ^1.0.0
@@ -607,17 +608,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@kaito-http/core@npm:^2.7.2":
-  version: 2.7.2
-  resolution: "@kaito-http/core@npm:2.7.2"
+"@kaito-http/core@npm:3.0.0-beta.6":
+  version: 3.0.0-beta.6
+  resolution: "@kaito-http/core@npm:3.0.0-beta.6"
   dependencies:
-    content-type: ^1.0.4
-    cookie: ^0.5.0
-    find-my-way: ^7.3.1
-    raw-body: ^2.5.1
-  peerDependencies:
-    zod: "*"
-  checksum: 77ac103cae823e0a8e371921b7836b2f4676f8b46267cb5b1faee6365f5b8aef76f790214c52ce2694c8c28b9facb28c61884ebbdca67fc5abc3e69e79f82b1e
+    content-type: ^1.0.5
+    cookie: ^0.6.0
+    find-my-way: ^9.1.0
+    raw-body: ^3.0.0
+  checksum: 5662f2a923217c683ae90f49f548685bde1654980c7eef950b6ff3214f7ef50ddf381cb14f82171f3ddd895bbb5d0c7f1e6371264a7c0826f3d37de787f9ef86
   languageName: node
   linkType: hard
 
@@ -659,6 +658,13 @@ __metadata:
   version: 2.0.0
   resolution: "@tootallnate/once@npm:2.0.0"
   checksum: ad87447820dd3f24825d2d947ebc03072b20a42bfc96cbafec16bff8bbda6c1a81fcb0be56d5b21968560c5359a0af4038a68ba150c3e1694fe4c109a063bed8
+  languageName: node
+  linkType: hard
+
+"@types/cookie@npm:^0.6.0":
+  version: 0.6.0
+  resolution: "@types/cookie@npm:0.6.0"
+  checksum: 5edce7995775b0b196b142883e4d4f71fd93c294eaec973670f1fa2540b70ea7390408ed513ddefef5fcb12a578100c76596e8f2a714b0c2ae9f70ee773f4510
   languageName: node
   linkType: hard
 
@@ -888,17 +894,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"content-type@npm:^1.0.4":
+"content-type@npm:^1.0.5":
   version: 1.0.5
   resolution: "content-type@npm:1.0.5"
   checksum: 566271e0a251642254cde0f845f9dd4f9856e52d988f4eb0d0dcffbb7a1f8ec98de7a5215fc628f3bce30fe2fb6fd2bc064b562d721658c59b544e2d34ea2766
   languageName: node
   linkType: hard
 
-"cookie@npm:^0.5.0":
-  version: 0.5.0
-  resolution: "cookie@npm:0.5.0"
-  checksum: 1f4bd2ca5765f8c9689a7e8954183f5332139eb72b6ff783d8947032ec1fdf43109852c178e21a953a30c0dd42257828185be01b49d1eb1a67fd054ca588a180
+"cookie@npm:^0.6.0":
+  version: 0.6.0
+  resolution: "cookie@npm:0.6.0"
+  checksum: f56a7d32a07db5458e79c726b77e3c2eff655c36792f2b6c58d351fb5f61531e5b1ab7f46987150136e366c65213cbe31729e02a3eaed630c3bf7334635fb410
   languageName: node
   linkType: hard
 
@@ -1099,14 +1105,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"find-my-way@npm:^7.3.1":
-  version: 7.6.0
-  resolution: "find-my-way@npm:7.6.0"
+"find-my-way@npm:^9.1.0":
+  version: 9.1.0
+  resolution: "find-my-way@npm:9.1.0"
   dependencies:
     fast-deep-equal: ^3.1.3
     fast-querystring: ^1.0.0
-    safe-regex2: ^2.0.0
-  checksum: b5bf14dadf52c61208351519a4681ee389ebec2547cf6ab82ae3ede1eb622657bc6ae45520d40eef09456345e80e145199aa801730cf998c481a602547cca763
+    safe-regex2: ^4.0.0
+  checksum: 1d4554fcc5681e995feab84f4f7c8d28e09463a5cd64ffbf26f7d1635ce6885101648cc510befb9ff529a92370ccb216e1e4fe96b9cc163da61985cd90542294
   languageName: node
   linkType: hard
 
@@ -1313,16 +1319,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"iconv-lite@npm:0.4.24":
-  version: 0.4.24
-  resolution: "iconv-lite@npm:0.4.24"
-  dependencies:
-    safer-buffer: ">= 2.1.2 < 3"
-  checksum: bd9f120f5a5b306f0bc0b9ae1edeb1577161503f5f8252a20f1a9e56ef8775c9959fd01c55f2d3a39d9a8abaf3e30c1abeb1895f367dcbbe0a8fd1c9ca01c4f6
-  languageName: node
-  linkType: hard
-
-"iconv-lite@npm:^0.6.2":
+"iconv-lite@npm:0.6.3, iconv-lite@npm:^0.6.2":
   version: 0.6.3
   resolution: "iconv-lite@npm:0.6.3"
   dependencies:
@@ -1934,15 +1931,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"raw-body@npm:^2.5.1":
-  version: 2.5.2
-  resolution: "raw-body@npm:2.5.2"
+"raw-body@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "raw-body@npm:3.0.0"
   dependencies:
     bytes: 3.1.2
     http-errors: 2.0.0
-    iconv-lite: 0.4.24
+    iconv-lite: 0.6.3
     unpipe: 1.0.0
-  checksum: ba1583c8d8a48e8fbb7a873fdbb2df66ea4ff83775421bfe21ee120140949ab048200668c47d9ae3880012f6e217052690628cf679ddfbd82c9fc9358d574676
+  checksum: 25b7cf7964183db322e819050d758a5abd0f22c51e9f37884ea44a9ed6855a1fb61f8caa8ec5b61d07e69f54db43dbbc08ad98ef84556696d6aa806be247af0e
   languageName: node
   linkType: hard
 
@@ -1973,10 +1970,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ret@npm:~0.2.0":
-  version: 0.2.2
-  resolution: "ret@npm:0.2.2"
-  checksum: 774964bb413a3525e687bca92d81c1cd75555ec33147c32ecca22f3d06409e35df87952cfe3d57afff7650a0f7e42139cf60cb44e94c29dde390243bc1941f16
+"ret@npm:~0.5.0":
+  version: 0.5.0
+  resolution: "ret@npm:0.5.0"
+  checksum: 3763aff074a56baa072afcfb5c19b09fb7c05045a27715bf4f28395cd11ab98cc2d0698bf4a3cd3f1c5e650ed167362d354c0e545ab134a6b7ec83df5e9d7d42
   languageName: node
   linkType: hard
 
@@ -2005,16 +2002,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"safe-regex2@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "safe-regex2@npm:2.0.0"
+"safe-regex2@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "safe-regex2@npm:4.0.0"
   dependencies:
-    ret: ~0.2.0
-  checksum: f5e182fca040dedd50ae052ea0eb035d9903b2db71243d5d8b43299735857288ef2ab52546a368d9c6fd1333b2a0d039297925e78ffc14845354f3f6158af7c2
+    ret: ~0.5.0
+  checksum: 5607d4c20a92d66905d33556807da759ef0615d3b508ae7d6e7558e763bd59042bd30afb32d5f2456eb3f69a9d86fadbdf5e3e292494dae89fdae3087532602e
   languageName: node
   linkType: hard
 
-"safer-buffer@npm:>= 2.1.2 < 3, safer-buffer@npm:>= 2.1.2 < 3.0.0":
+"safer-buffer@npm:>= 2.1.2 < 3.0.0":
   version: 2.1.2
   resolution: "safer-buffer@npm:2.1.2"
   checksum: cab8f25ae6f1434abee8d80023d7e72b598cf1327164ddab31003c51215526801e40b66c5e65d658a0af1e9d6478cadcb4c745f4bd6751f97d8644786c0978b0

@@ -8,8 +8,9 @@
 		"start": "tsx src/app.ts"
 	},
 	"dependencies": {
-		"@kaito-http/core": "^2.7.2",
+		"@kaito-http/core": "3.0.0-beta.6",
 		"@prequist/lanyard": "^0.0.2",
+		"@types/cookie": "^0.6.0",
 		"dotenv": "^16.0.3",
 		"es-urlcat": "^1.0.0",
 		"jimp": "^0.22.7",

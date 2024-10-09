@@ -1,4 +1,4 @@
-import Pika, {type InferPrefixes} from 'pika-id';
+import {Pika, type InferPrefixes} from 'pika-id';
 
 export const pika = new Pika(['shortcut']);
 

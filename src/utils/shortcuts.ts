@@ -1,5 +1,5 @@
 import {z} from 'zod';
-import {pika} from './pika';
+import {pika} from './pika.ts';
 
 type ToNumber<T> = T extends `${infer X extends number}` ? X : never;
 type Digit = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
