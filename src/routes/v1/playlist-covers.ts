@@ -1,8 +1,8 @@
-import {z} from 'zod';
-import {router} from '../../router';
 import Jimp from 'jimp';
-import {env} from '../../env';
 import {join} from 'node:path';
+import {z} from 'zod';
+import {env} from '../../env.ts';
+import {router} from '../../router.ts';
 
 const fontsDir = join(env.ROOT_PROJECT_DIR, 'fonts');
 const avenirPath = join(fontsDir, 'avenir.fnt');

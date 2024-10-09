@@ -1,7 +1,7 @@
 import {KaitoError} from '@kaito-http/core';
 import {z} from 'zod';
-import {router} from '../../router';
-import {rangesSchema} from '../../utils/shortcuts';
+import {router} from '../../router.ts';
+import {rangesSchema} from '../../utils/shortcuts.ts';
 
 export const shortcuts = router()
 	.add('POST', '/', {
