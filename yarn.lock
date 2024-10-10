@@ -9,7 +9,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@alii/api@workspace:."
   dependencies:
-    "@kaito-http/core": 3.0.0-beta.6
+    "@kaito-http/core": 3.0.0-beta.7
     "@prequist/lanyard": ^0.0.2
     "@types/cookie": ^0.6.0
     "@types/node": ^18.15.10
@@ -608,15 +608,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@kaito-http/core@npm:3.0.0-beta.6":
-  version: 3.0.0-beta.6
-  resolution: "@kaito-http/core@npm:3.0.0-beta.6"
+"@kaito-http/core@npm:3.0.0-beta.7":
+  version: 3.0.0-beta.7
+  resolution: "@kaito-http/core@npm:3.0.0-beta.7"
   dependencies:
     content-type: ^1.0.5
     cookie: ^0.6.0
     find-my-way: ^9.1.0
     raw-body: ^3.0.0
-  checksum: 5662f2a923217c683ae90f49f548685bde1654980c7eef950b6ff3214f7ef50ddf381cb14f82171f3ddd895bbb5d0c7f1e6371264a7c0826f3d37de787f9ef86
+  checksum: 0e3d84c9e09eaed7c13d6a8bcb7726912554528a5bbd180f727d59a8d6ddc5e1eeb4d4e17e0951d41a25a9b4278db23e6d3bcfde2e836c79e124a63b5549a551
   languageName: node
   linkType: hard
 
