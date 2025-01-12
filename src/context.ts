@@ -1,11 +1,10 @@
-import {createGetContext, type InferContext} from '@kaito-http/core';
+import {createUtilities} from '@kaito-http/core';
 import {env} from './env.ts';
-import {LanyardClient} from './utils/clients/lanyard.ts';
-import {createShortcut, validateShortcutInvocation} from './utils/shortcuts.ts';
+import {LanyardClient} from './utils/lanyard.ts';
 
 const start = Date.now();
 
-export const getContext = createGetContext(async (req, res) => {
+export const {getContext, router} = createUtilities(async (req, res) => {
 	return {
 		req,
 		res,
@@ -21,12 +20,5 @@ export const getContext = createGetContext(async (req, res) => {
 			snowflake: env.DISCORD_ID,
 			token: env.LANYARD_TOKEN,
 		}),
-
-		shortcuts: {
-			create: createShortcut,
-			validateInvocation: validateShortcutInvocation,
-		},
 	};
 });
-
-export type Context = InferContext<typeof getContext>;

@@ -1,13 +1,13 @@
 import {KaitoError} from '@kaito-http/core';
 import {z} from 'zod';
+import {router} from '../../context.ts';
 import {env} from '../../env.ts';
-import {router} from '../../router.ts';
 
 export const stats = router()
 	.add('POST', '/', {
 		body: z.object({location: z.string()}).partial(),
 		run: async ({ctx, body}) => {
-			const auth = ctx.req.headers.authorization;
+			const auth = ctx.req.headers.get('Authorization');
 
 			if (auth !== env.INGEST_TOKEN) {
 				throw new KaitoError(401, 'Forbidden');

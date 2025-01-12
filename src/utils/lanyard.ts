@@ -1,6 +1,6 @@
 import {API, LanyardHTTPError, type Types} from '@prequist/lanyard';
 import urlcat from 'es-urlcat';
-import {env} from '../../env.ts';
+import {env} from '../env.ts';
 
 export interface LanyardClientOptions {
 	token: string;

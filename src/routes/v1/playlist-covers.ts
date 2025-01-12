@@ -1,43 +1,43 @@
-import Jimp from 'jimp';
+import {HorizontalAlign, Jimp, loadFont, VerticalAlign} from 'jimp';
 import {join} from 'node:path';
 import {z} from 'zod';
+import {router} from '../../context.ts';
 import {env} from '../../env.ts';
-import {router} from '../../router.ts';
 
 const fontsDir = join(env.ROOT_PROJECT_DIR, 'fonts');
 const avenirPath = join(fontsDir, 'avenir.fnt');
 
-const avenir = await Jimp.loadFont(avenirPath);
+const avenir = await loadFont(avenirPath);
 
-const SQUARE_SIDE = 1080;
-
-export const playlistCovers = router().add('GET', '/', {
+export const playlistCovers = router().get('/', {
 	query: {
 		title: z.string().max(20),
 		image: z.string().url(),
+		size: z.string().transform(Number).pipe(z.number().positive().max(2000).default(1080)),
 	},
-	run: async ({query, ctx}) => {
+	run: async ({query}) => {
 		const image = await Jimp.read(query.image);
 
 		const buffer = await image
-			.resize(SQUARE_SIDE, SQUARE_SIDE)
-			.quality(100)
-			.print(
-				avenir,
-				0,
-				0,
-				{
+			.resize({w: query.size, h: query.size})
+			.print({
+				font: avenir,
+				x: 0,
+				y: 0,
+				maxWidth: query.size,
+				maxHeight: query.size,
+				text: {
 					text: query.title,
-					alignmentX: Jimp.HORIZONTAL_ALIGN_CENTER,
-					alignmentY: Jimp.VERTICAL_ALIGN_MIDDLE,
+					alignmentX: HorizontalAlign.CENTER,
+					alignmentY: VerticalAlign.MIDDLE,
 				},
-				SQUARE_SIDE,
-				SQUARE_SIDE,
-			)
-			.getBufferAsync('image/png');
+			})
+			.getBuffer('image/png');
 
-		ctx.res.header('Content-Type', 'image/png');
-
-		ctx.res.raw.end(buffer);
+		return new Response(buffer, {
+			headers: {
+				'Content-Type': 'image/png',
+			},
+		});
 	},
 });
