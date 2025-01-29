@@ -4,10 +4,10 @@ import {LanyardClient} from './utils/lanyard.ts';
 
 const start = Date.now();
 
-export const {getContext, router} = createUtilities(async (req, res) => {
+export const {getContext, router} = createUtilities(async (req, head) => {
 	return {
 		req,
-		res,
+		head,
 
 		/**
 		 * The current uptime in ms

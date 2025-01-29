@@ -28,7 +28,7 @@ const fetch = createKaitoHandler({
 });
 
 const server = await KaitoServer.serve({
-	port: 3000,
+	port: 8080,
 	fetch,
 });
 

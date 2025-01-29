@@ -8,7 +8,7 @@
 		"start": "node --import=tsx src/app.ts"
 	},
 	"dependencies": {
-		"@kaito-http/core": "3.0.0-beta.21",
+		"@kaito-http/core": "^3.0.2",
 		"@kaito-http/uws": "3.0.0-beta.21",
 		"@prequist/lanyard": "^0.0.2",
 		"alistair": "^1.12.0",

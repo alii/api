@@ -1,10 +1,7 @@
-FROM node:23-alpine
+FROM imbios/bun-node
 WORKDIR /app
 COPY package.json .
-COPY yarn.lock .
-COPY .yarn .yarn
-COPY .yarnrc.yml .
-RUN yarn workspaces focus --production
+COPY bun.lock .
+RUN bun install --production
 COPY . .
-RUN yarn cache clean
-CMD ["yarn", "start"]
+CMD ["bun", "start"]

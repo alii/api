@@ -20,8 +20,6 @@ export const stats = router()
 
 				await ctx.lanyard.update('location', body.location);
 			}
-
-			ctx.res.status(204);
 		},
 	})
 	.add('GET', '/', async ({ctx}) => {
